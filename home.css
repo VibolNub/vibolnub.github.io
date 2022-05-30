@@ -89,3 +89,10 @@ body{
     font-size: 1.2em;
     text-transform: uppercase;
 }
+.cta::selection{
+    background: black;
+}
+.list1 a{
+    font-weight: bold;
+    font-size: 1.3rem;
+}
