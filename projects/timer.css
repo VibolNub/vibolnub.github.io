@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: ;
+}
+
+ h1::selection, h3::selection, p::selection, span::selection{
+    background: orangered;
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.hero h1{
+    margin: 10px;
+    font-size: 8em;
+    font-family: poppins;
+}
+.hero button{
+    margin: 40px;
+    width: 100px;
+    height: 30px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    font-family: poppins, sans-serif;
+    background: rgb(243, 243, 243);
+    transition: .2s ease-in-out;
+  box-shadow: -6px -6px 14px rgba(255, 255, 255, .7),
+              -6px -6px 10px rgba(255, 255, 255, .5),
+              6px 6px 8px rgba(255, 255, 255, .075),
+              6px 6px 10px rgba(0, 0, 0, .15);
+}
+
+.hero h3{
+    font-family: poppins;
+    font-size: 3em;
+}
+#btnStart:hover{
+    background-color: aquamarine;
+    box-shadow: -2px -2px 6px rgba(255, 255, 255, .6),
+              -2px -2px 4px rgba(255, 255, 255, .4),
+              2px 2px 2px rgba(255, 255, 255, .05),
+              2px 2px 4px rgba(0, 0, 0, .1);
+}
+#btnStop:hover{
+    background-color: #FF6F91;
+    box-shadow: -2px -2px 6px rgba(255, 255, 255, .6),
+              -2px -2px 4px rgba(255, 255, 255, .4),
+              2px 2px 2px rgba(255, 255, 255, .05),
+              2px 2px 4px rgba(0, 0, 0, .1);
+}
+#btnSet:hover{
+    background-color: #FFC75F;
+    box-shadow: -2px -2px 6px rgba(255, 255, 255, .6),
+              -2px -2px 4px rgba(255, 255, 255, .4),
+              2px 2px 2px rgba(255, 255, 255, .05),
+              2px 2px 4px rgba(0, 0, 0, .1);
+}
+#btnStart:active{
+    
+  box-shadow: inset -2px -2px 6px rgba(255, 255, 255, .7),
+  inset -2px -2px 4px rgba(255, 255, 255, .5),
+  inset 2px 2px 2px rgba(255, 255, 255, .075),
+  inset 2px 2px 4px rgba(0, 0, 0, .15);
+}
+#btnStop:active{
+    box-shadow: inset -2px -2px 6px rgba(255, 255, 255, .7),
+                inset -2px -2px 4px rgba(255, 255, 255, .5),
+                inset 2px 2px 2px rgba(255, 255, 255, .075),
+                inset 2px 2px 4px rgba(0, 0, 0, .15);
+}
+#btnSet:active{
+    
+  box-shadow: inset -2px -2px 6px rgba(255, 255, 255, .7),
+  inset -2px -2px 4px rgba(255, 255, 255, .5),
+  inset 2px 2px 2px rgba(255, 255, 255, .075),
+  inset 2px 2px 4px rgba(0, 0, 0, .15);
+}
