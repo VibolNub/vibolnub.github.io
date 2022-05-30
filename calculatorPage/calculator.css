@@ -106,3 +106,22 @@ footer p::selection{
     background-color: black;
     color: white;
 }
+.back{
+    position: absolute;
+}
+.fa-solid{
+    padding: 5px;
+    font-size: 0.9rem;
+}
+.back a{
+    text-decoration: none;
+    color: #0c2742;
+    font-family: poppins;
+    font-weight: bold;
+}
+.back a:hover{
+    color: #4b5763;
+}
+.back a:hover:active{
+    color: white;
+}
