@@ -3,7 +3,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: ;
+    font-family: poppins;
 }
 
  h1::selection, h3::selection, p::selection, span::selection{
