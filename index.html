@@ -10,17 +10,21 @@
 </head>
 <body>
     <div class="container">
+        <div class="nav-smallerDevice">
+            <a href="index.html" >VIBOL</a>
+            <i class="fa-solid fa-bars" id="menuIcon" onclick="menu_clicked()"></i>
+        </div>
         <nav class="nav">
-            <div class="list">
-                <div class="list1">
+            <div class="list" id="listID">
+                <div class="lists list1">
                     <a href="index.html" >VIBOL</a>
                 </div>
-                <div class="list2">
+                <div class="lists list2">
                     <a href="#">About Me</a>
                     <a href="/projects/project.html">My Projects</a>
                     <a href="#">Contact Me</a>
                 </div>
-                <div class="list3">
+                <div class="lists list3">
                     <a href="https://www.facebook.com/jaquehofficial" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i></a>
                     <a href="https://www.instagram.com/nub_vibol/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
                     <a href="https://www.behance.net/vibolnub" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-behance"></i></a>
@@ -37,5 +41,26 @@
         </div>
 
     </div>
+    <script>
+        function menu_clicked(){
+            var menuIcon = document.getElementById('menuIcon');
+            var listId = document.querySelector('list');
+            var navigationBar = document.querySelector('nav');
+            if(menuIcon.classList.contains('fa-bars') == true){
+                navigationBar.style.display ="block";
+                navigationBar.style.transform = 'scaleX(1)';
+                menuIcon.classList.toggle('fa-times');
+                menuIcon.classList.remove('fa-bars');
+            }
+            else if(menuIcon.classList.contains('fa-bars') == false){
+                //navigationBar.style.display ="none";
+                navigationBar.style.transform = 'scaleX(0)';
+                menuIcon.classList.toggle('fa-bars');
+                menuIcon.classList.remove('fa-times');
+            }
+            
+        }
+     
+    </script>
 </body>
 </html>

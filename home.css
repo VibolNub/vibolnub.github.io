@@ -4,7 +4,9 @@
     margin: 0;
     box-sizing: border-box;
 }
-
+.nav-smallerDevice{
+    display: none;
+}
 body{
     font-family: poppins;
 }
@@ -76,7 +78,8 @@ body{
     background-color: rgb(204, 204, 204);
 }
 .cta button:active{
-    background-color: #675ee8;
+    background-color:#675ee8;
+    backdrop-filter: blur(20px);
     color: white;
 }
 .cta button:active a{
@@ -95,4 +98,66 @@ body{
 .list1 a{
     font-weight: bold;
     font-size: 1.3rem;
+}
+
+@media all and (max-width: 427px) {
+    .nav{
+        display: none;
+        background-color:#00000032;
+        backdrop-filter: blur(100px);
+    }
+    .nav-smallerDevice{
+        display: flex;
+        position: fixed;
+        width: 100vw;
+        padding: 5px 20px;
+        font-size: 1.6rem;
+        color: #675ee8;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+    .nav-smallerDevice a{
+        text-decoration: none;
+        color: #675ee8;
+        font-weight: 900;
+    }
+    .nav-smallerDevice:active{
+        color: white;
+    }
+    .nav-smallerDevice a:active{
+        color: white;
+    }
+    .illustration{
+        display: none;
+    }
+    .nav{
+        position: fixed;
+        width: 50vw;
+        height: 100%;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: 0.3s ease-in-out;
+    }
+    .list{
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        margin: 10px 20px;
+        align-items: flex-start;
+        font-family: 1rem;
+    }
+    .lists{
+        padding: 20px;
+        font-size: 1.4rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+    }
+    .lists a:hover{
+        color: #675ee8;
+    }
+    .lists a{
+        font-size: 1.2rem;
+    }
 }
