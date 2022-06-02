@@ -209,4 +209,7 @@ p::selection, h1::selection, h3::selection, span::selection, a::selection, div::
     .lists a{
         font-size: 1rem;
     }
+    .list3{
+        display: block;
+    }
 }
