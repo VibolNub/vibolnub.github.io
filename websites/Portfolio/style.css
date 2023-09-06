@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: Rubik, sans-serif;
+}
+*::selection {
+    background-color: #ff9e21;
+}
+#main {
+    background: hsla(213, 11%, 31%, 1);
+    background: linear-gradient(45deg, hsla(213, 11%, 31%, 1) 0%, hsla(215, 15%, 15%, 1) 100%);
+    background: -moz-linear-gradient(45deg, hsla(213, 11%, 31%, 1) 0%, hsla(215, 15%, 15%, 1) 100%);
+    background: -webkit-linear-gradient(45deg, hsla(213, 11%, 31%, 1) 0%, hsla(215, 15%, 15%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#464E58", endColorstr="#21262D", GradientType=1);
+    height: 100vh;
+}
+.text-tertiary{
+    color: #ff9e21;
+}
+#helo{
+    background-color: red;
+}
+.list-group button{
+    padding:20px 10px;
+    background-color: transparent;
+    border: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+}
+.list-group button:hover{
+    background-color: #ffffff35;
+}
+@media (max-width: 767px) {
+    #main {
+        height:170vh;
+    }
+    img{
+        padding-top:40px;
+    }
+}
