@@ -1,33 +1,39 @@
-name: Deploy to S3
+name: Deploy to S3 via OIDC
 
 on:
   push:
-    branches: [ "main" ]  # or your deployment branch
+    branches:
+      - main
+
+permissions:
+  id-token: write
+  contents: read
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repo
+    - name: Checkout code
       uses: actions/checkout@v3
 
-    - name: Sync files to S3
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v2
+      with:
+        role-to-assume: arn:aws:iam::123456789012:role/GitHubDeployRole
+        aws-region: us-east-1
+
+    - name: Sync to S3
       uses: jakejarvis/s3-sync-action@v0.5.1
       with:
         args: --delete
       env:
         AWS_S3_BUCKET: vibol.me
-        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         AWS_REGION: us-east-1
-        SOURCE_DIR: ./  # change if your files are in a subfolder
+        SOURCE_DIR: ./
 
-    - name: Invalidate CloudFront cache (optional)
+    - name: Invalidate CloudFront cache
       uses: chetan/invalidate-cloudfront-action@v2
       with:
         distribution-id: E2SDITR2XV5G4P
         paths: '/*'
-      env:
-        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
